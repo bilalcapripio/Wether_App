@@ -1,9 +1,19 @@
+body{
+  background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80");
+  width: 100%;
+  height: 100vh;
+  animation: animation 100s linear infinite;
+}
+@keyframes animation {
+  100%{
+    background-position:0px -3000px;
+  }
+}
 #main {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-
 .card-body{
   padding: 0;
 }
@@ -14,8 +24,8 @@
 .title {
   font-size: 50px;
   font-weight: 500;
+  color: #fff;
 }
-
 .form-rounded {
   border-radius: 2rem;
 }
@@ -25,29 +35,30 @@
   background: linear-gradient(to bottom right, #707070, #434647);
   text-shadow: 2px 2px 2px #707070;
 }
-
 .city-name {
   position: absolute;
   width: 100%;
 }
-
 .city-name p {
   font-weight: 400;
   font-size: 32pt;
+  position: relative;
+  top: 17px;
 }
-
 .city-name span {
   position: relative;
-  top: -9px;
+  top: -47px;
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
-
 .temp span {
   font-weight: 100;
   font-size: 5em;
   letter-spacing: -5px;
   white-space: nowrap;
+  position: relative;
+  top: -12px;
+
 }
 .card-mid {
   line-height: 0.5;
@@ -58,15 +69,12 @@
   line-height: 1em;
   text-transform: capitalize;
 }
-
 .high {
   font-size: 15px;
 }
-
 .low {
   font-size: 15px;
 }
-
 .card-bottom p {
   font-size: 50px;
   font-weight: 100;
@@ -75,11 +83,9 @@
 .card-bottom {
   line-height: 0.5;
 }
-
 .card-bottom span {
   font-size: 12px;
 }
-
 .form-control:focus {
   box-shadow: none;
   border-color: inherit;
