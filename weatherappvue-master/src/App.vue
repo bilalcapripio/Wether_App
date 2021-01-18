@@ -1,11 +1,16 @@
 <template>
   <div id="main" :class="isDay ? 'day' : 'night'">
     <div class="container my-5">
-      <h1 class="title text-center">Weather App</h1>
+
+
+      <!-- <h1 class="title text-center">Weather App</h1>
             <span id="histry">{{ moment("2021-1-12 8:00:00").fromNow() }}</span>
         <form class="search-location" v-on:submit.prevent="getWeather">
             <input type="text" class="form-control text-muted form-rounded p-4 shadow-sm"   placeholder="Search City..."  v-model="citySearch"   autocomplete="off" />
-        </form>
+        </form> -->
+        <citysearch/>
+
+
       <p class="text-center my-5" v-if="cityFound" id="found">
         There's no place like <br />
         127.0.0.1
@@ -205,15 +210,16 @@
 var moment = require("moment");
 
 //  Start All Component is here
-// import citysearch from './components/citysearch.vue'
+import citysearch from './components/citysearch.vue'
 //  End All Component is here
 
-
 export default {
-  // components:{
-  //   citysearch
+  components:{
+    citysearch
+  },
 
-  // },
+
+  
   data() {
     // const dt_txt=moment();
     // console.log(weather.dt_txt.format('dddd'));
